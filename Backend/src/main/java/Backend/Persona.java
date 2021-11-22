@@ -1,14 +1,20 @@
 import java.util.Date;
 
 public class Persona {
-	String Nombre, apellidos;
+	String nombre, apellidos;
 	int edad;
-	public Persona(String nombre, String apellidos, int edad) {
+	int id;
+	public Persona(int id, String nombre, String apellidos, int edad) {
+		this.id=id;
 		this.nombre=nombre;
 		this.apellidos=apellidos;
 		this.edad=edad;
 	}
 	
+	public int getId() {
+		return id;
+	}
+
 	public String getNombre() {
 		return nombre;
 	}
