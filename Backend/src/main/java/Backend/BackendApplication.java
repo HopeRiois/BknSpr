@@ -15,15 +15,14 @@ public class BackendApplication {
 	}
 	
 	@GetMapping("/add")
-	public void hello(@RequestParam(value = "ID") int id,
+	public String hello(@RequestParam(value = "ID") int id,
 	@RequestParam(value = "name") String name, 
 	@RequestParam(value = "apellidos") String apellidos,
-	@RequestParam(value = "edad") int edad) 
+	@RequestParam(value = "edad") int edad)
 	{
 		Personas p = new Personas();
 		Persona person = new Persona(id,name,apellidos,edad);
 		p.agregarPersona(person);
-		p.listar();
+		return String.format(p.listar());
 	}
-
 }
