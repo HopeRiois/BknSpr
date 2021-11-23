@@ -1,9 +1,7 @@
-import java.util.Date;
 
 public class Persona {
 	String nombre, apellidos;
-	int edad;
-	int id;
+	int edad,id;
 	public Persona(int id, String nombre, String apellidos, int edad) {
 		this.id=id;
 		this.nombre=nombre;
