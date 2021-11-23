@@ -31,4 +31,13 @@ public class Personas {
     public Persona getPersona(int id){
         return personas.get(id);
     }
+
+    public String listar(){
+        String datos ="";
+        for(Persona i : personas)
+        {
+            datos= datos + i.getNombre();
+        }
+        return datos;
+    }
 }
