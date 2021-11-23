@@ -3,21 +3,20 @@ pipeline {
 
     tools {
         // Install the Maven version configured as "M3" and add it to the path.
-        maven "maven 3.8.3"
+        maven "maven 3.8.4"
     }
 
     stages {
-      stage('Clean'){
-      steps {
-          bat "mvn clean"
-      }
-      }
-        stage('Package') {
-      steps { 
-          bat "mvn package"
-      }
+        stage('limpiar') {
+            steps {
+                bat "mvn -Dmaven.test.failure.ignore=true clean"
             }
         }
         
+        stage('empacar') {
+            steps {
+                bat "mvn -Dmaven.test.failure.ignore=true package"
+            }
+        }
     }
-
+}
