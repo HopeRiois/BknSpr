@@ -8,11 +8,14 @@ pipeline {
 
     stages {
       stage('Clean'){
-      bat "mvn clean"
+      steps {
+          bat "mvn clean"
+      }
       }
         stage('Package') {
-                    bat "mvn package"
-
+      steps { 
+          bat "mvn package"
+      }
             }
         }
         
