@@ -1,3 +1,4 @@
+package Backend;
 
 public class Persona {
 	String nombre, apellidos;
