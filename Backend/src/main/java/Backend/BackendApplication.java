@@ -25,4 +25,26 @@ public class BackendApplication {
 		p.agregarPersona(person);
 		return String.format(p.listar());
 	}
+
+	@GetMapping("/getAll")
+	public String hello()
+	{
+		Personas p = new Personas();
+		Persona person = new Persona(1, "Macta", "Llega", 19);
+		Persona person1 = new Persona(2, "No señor", "Repete", 30);
+		p.agregarPersona(person);
+		p.agregarPersona(person1);
+		return String.format(p.listar());
+	}
+
+	@GetMapping("/getOne")
+	public String hello(@RequestParam(value = "ID") int id)
+	{
+		Personas p = new Personas();
+		Persona person = new Persona(1, "Macta", "Llega", 19);
+		Persona person1 = new Persona(1, "No señor", "Repete", 30);
+		p.agregarPersona(person);
+		p.agregarPersona(person1);
+		return String.format(p.getPersona(id));
+	}
 }
