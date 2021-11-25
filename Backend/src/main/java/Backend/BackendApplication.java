@@ -15,7 +15,7 @@ public class BackendApplication {
 	}
 	
 	@GetMapping("/add")
-	public String hello(@RequestParam(value = "ID") int id,
+	public String Agregar(@RequestParam(value = "ID") int id,
 	@RequestParam(value = "name") String name, 
 	@RequestParam(value = "apellidos") String apellidos,
 	@RequestParam(value = "edad") int edad)
@@ -27,7 +27,7 @@ public class BackendApplication {
 	}
 
 	@GetMapping("/getAll")
-	public String hello()
+	public String Listar()
 	{
 		Personas p = new Personas();
 		Persona person = new Persona(1, "Macta", "Llega", 19);
@@ -38,7 +38,7 @@ public class BackendApplication {
 	}
 
 	@GetMapping("/getOne")
-	public String hello(@RequestParam(value = "ID") int id)
+	public String GetPersona(@RequestParam(value = "ID") int id)
 	{
 		Personas p = new Personas();
 		Persona person = new Persona(1, "Macta", "Llega", 19);
