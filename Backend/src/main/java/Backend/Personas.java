@@ -30,8 +30,10 @@ public class Personas {
         personas.get(id).setEdad(edad);
     }
 
-    public Persona getPersona(int id){
-        return personas.get(id);
+    public String getPersona(int id){
+        String dato ="";
+        dato= dato + personas.get(id).nombre + " " + personas.get(id).apellidos + " " + personas.get(id).edad + "\n";
+        return dato;
     }
 
     public String listar(){
