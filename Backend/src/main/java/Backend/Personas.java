@@ -10,8 +10,8 @@ public class Personas {
         Persona person1 = new Persona(2, "Marta", "Alvarez", 19);
 		Persona person2 = new Persona(3, "Rosa", "Meza", 30);
         this.personas.add(p);
-		p.agregarPersona(person1);
-		p.agregarPersona(person2);
+		this.personas.add(person1);
+		this.personas.add(person2);
 	}
 	
 	public boolean agregarPersona(Persona persona){
