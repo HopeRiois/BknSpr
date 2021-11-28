@@ -16,45 +16,51 @@ public class Personas {
 
     public void removerPersona(int id){
         for(Persona i : personas){
-            if(i.getId == id){
+            if(i.getId() == id){
                 personas.remove(i);
             }
         }
     }
 
     public void editarNombre(int id, String nombre){
+        int j = 0;
         for(Persona i : personas){
-            if(i.getId == id){
-                personas.get(i).setNombre(nombre);
+            if(i.getId() == id){
+                personas.get(j).setNombre(nombre);
             }
+            j++;
         }
     }
 
     public void editarApellidos(int id, String apellidos){
+        int j = 0;
         for(Persona i : personas){
-            if(i.getId == id){
-                personas.get(i).setApellidos(apellidos);
+            if(i.getId() == id){
+                personas.get(j).setApellidos(apellidos);
             }
+            j++;
         }
     }
 
     public void editarEdad(int id, int edad){
+        int j = 0;
         for(Persona i : personas){
-            if(i.getId == id){
-                personas.get(id).setEdad(edad);
+            if(i.getId() == id){
+                personas.get(j).setEdad(edad);
             }
+            j++;
         }
     }
 
     public String getPersona(int id){
         String dato ="";
         for (Persona i : personas){
-            if (i.getId == id){
-                dato= dato + i.getNombre + " " + i.getApellidos + " " + i.getEdad + "\n";
+            if (i.getId() == id){
+                dato= dato + i.getNombre() + " " + i.getApellidos() + " " + i.getEdad() + "\n";
             }
         }
         if (dato == ""){
-            dato = "No se pudo encontrar la persona indicada"
+            dato = "No se pudo encontrar la persona indicada";
         }
         return dato;
     }
