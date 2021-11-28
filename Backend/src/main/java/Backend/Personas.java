@@ -15,24 +15,47 @@ public class Personas {
     }
 
     public void removerPersona(int id){
-        personas.remove(id);
+        for(Persona i : personas){
+            if(i.getId == id){
+                personas.remove(i);
+            }
+        }
     }
 
     public void editarNombre(int id, String nombre){
-        personas.get(id).setNombre(nombre);
+        for(Persona i : personas){
+            if(i.getId == id){
+                personas.get(i).setNombre(nombre);
+            }
+        }
     }
 
     public void editarApellidos(int id, String apellidos){
-        personas.get(id).setApellidos(apellidos);
+        for(Persona i : personas){
+            if(i.getId == id){
+                personas.get(i).setApellidos(apellidos);
+            }
+        }
     }
 
     public void editarEdad(int id, int edad){
-        personas.get(id).setEdad(edad);
+        for(Persona i : personas){
+            if(i.getId == id){
+                personas.get(id).setEdad(edad);
+            }
+        }
     }
 
     public String getPersona(int id){
         String dato ="";
-        dato= dato + personas.get(id).nombre + " " + personas.get(id).apellidos + " " + personas.get(id).edad + "\n";
+        for (Persona i : personas){
+            if (i.getId == id){
+                dato= dato + i.getNombre + " " + i.getApellidos + " " + i.getEdad + "\n";
+            }
+        }
+        if (dato == ""){
+            dato = "No se pudo encontrar la persona indicada"
+        }
         return dato;
     }
 
