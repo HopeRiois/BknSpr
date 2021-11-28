@@ -69,7 +69,7 @@ public class Personas {
         String datos ="";
         for(Persona i : personas)
         {
-            datos= datos + i.getNombre() + " " + i.getApellidos() + " " + i.getEdad() + "\n";
+            datos = datos + i.getNombre() + " " + i.getApellidos() + " " + i.getEdad() + " | ";
         }
         return datos;
     }
