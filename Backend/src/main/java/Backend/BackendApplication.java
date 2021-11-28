@@ -41,8 +41,8 @@ public class BackendApplication {
 	public String GetPersona(@RequestParam(value = "ID") int id)
 	{
 		Personas p = new Personas();
-		Persona person = new Persona(1, "Macta", "Llega", 19);
-		Persona person1 = new Persona(1, "No señor", "Repete", 30);
+		Persona person = new Persona(2, "Macta", "Llega", 19);
+		Persona person1 = new Persona(3, "No señor", "Repete", 30);
 		p.agregarPersona(person);
 		p.agregarPersona(person1);
 		return String.format(p.getPersona(id));
