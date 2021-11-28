@@ -6,8 +6,12 @@ public class Personas {
 	private ArrayList<Persona> personas;
 	public Personas() {
 		this.personas= new ArrayList();
-        Persona p = new Persona(1,"XX","YY",100);
+        Persona p = new Persona(1,"Andres","Rojas",100);
+        Persona person1 = new Persona(2, "Marta", "Alvarez", 19);
+		Persona person2 = new Persona(3, "Rosa", "Meza", 30);
         this.personas.add(p);
+		p.agregarPersona(person1);
+		p.agregarPersona(person2);
 	}
 	
 	public boolean agregarPersona(Persona persona){

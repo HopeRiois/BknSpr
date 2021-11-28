@@ -21,10 +21,6 @@ public class BackendApplication {
 	@RequestParam(value = "edad") int edad)
 	{
 		Personas p = new Personas();
-		Persona person = new Persona(2, "Macta", "Llega", 19);
-		Persona person1 = new Persona(3, "No señor", "Repete", 30);
-		p.agregarPersona(person);
-		p.agregarPersona(person1);
 		String prueba = "datos antes: " + p.listar();
 		Persona person2 = new Persona(id,name,apellidos,edad);
 		p.agregarPersona(person2);
@@ -36,10 +32,6 @@ public class BackendApplication {
 	public String Listar()
 	{
 		Personas p = new Personas();
-		Persona person = new Persona(2, "Macta", "Llega", 19);
-		Persona person1 = new Persona(3, "No señor", "Repete", 30);
-		p.agregarPersona(person);
-		p.agregarPersona(person1);
 		return String.format(p.listar());
 	}
 
@@ -47,10 +39,6 @@ public class BackendApplication {
 	public String GetPersona(@RequestParam(value = "ID") int id)
 	{
 		Personas p = new Personas();
-		Persona person = new Persona(2, "Macta", "Llega", 19);
-		Persona person1 = new Persona(3, "No señor", "Repete", 30);
-		p.agregarPersona(person);
-		p.agregarPersona(person1);
 		return String.format(p.getPersona(id));
 	}
 
@@ -61,12 +49,6 @@ public class BackendApplication {
 								@RequestParam(value = "edad") int edad)
 	{
 		Personas p = new Personas();
-		Persona person = new Persona(2, "Macta", "Llega", 19);
-		Persona person1 = new Persona(3, "No señor", "Repete", 30);
-		p.agregarPersona(person);
-		p.agregarPersona(person1);
-
-
 		String prueba = "datos antes: " + p.listar();
 		p.editarApellidos(id, apellidos);
 		p.editarNombre(id, nombre);
@@ -80,10 +62,6 @@ public class BackendApplication {
 	public String DeletePersona(@RequestParam(value = "ID") int id)
 	{
 		Personas p = new Personas();
-		Persona person = new Persona(2, "Macta", "Llega", 19);
-		Persona person1 = new Persona(3, "No señor", "Repete", 30);
-		p.agregarPersona(person);
-		p.agregarPersona(person1);
 		String prueba = "datos antes: " + p.listar();
 		p.removerPersona(id);
 		prueba = prueba + "\n" + " datos después: " + p.listar();
